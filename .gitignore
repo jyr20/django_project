@@ -1,2 +1,4 @@
+*.swp
 django_project/settings_secret.py
 settings_secret.py
+*__pycashe__*
