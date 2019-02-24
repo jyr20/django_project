@@ -6,8 +6,6 @@ from .models import Post
 
 def home(request):
     """ Returns a HTTP request or exception"""
-    # Define this dictionary key to above fake data so that in home.html 
-    # we can refer to the above dictionary as 'posts'
     context = {
         'posts':Post.objects.all()
     }
