@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 # Create your models here. Models are written as Python classes. 
 # Each class will be its own table in the database.
@@ -13,3 +14,8 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    # django needs this method to know what the URL of a new instance of Post is
+    def get_absolute_url(self):
+        #reverse returns a string of full path rather than redirecting
+        return reverse('post-detail',kwargs={'pk': self.pk}) 
