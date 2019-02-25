@@ -1,4 +1,3 @@
-from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.contrib import messages # Types of messages include debug,info,succes,warning and error
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
